@@ -20,7 +20,7 @@
   <project remote="clo-la" name="kernel_platform/external/python/absl-py" path="kernel_platform/external/python/absl-py" revision="e46584edbb247bf79c74c4f105b6fff18234cee8" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" clone-depth="1"/>
   <project remote="clo-la" name="kernel_platform/external/stardoc" path="kernel_platform/external/stardoc" revision="0d74fed6f8d0844f696771e71bc0b071cae99021" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" clone-depth="1"/>
   <project remote="clo-la" name="kernel_platform/prebuilts/bazel/linux-x86_64" path="kernel_platform/prebuilts/bazel/linux-x86_64" revision="eee09422f02e60f28192bcb5a8ce8660baba6706" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" clone-depth="1"/>
-  <project remote="clo-la" name="kernel_platform/prebuilts/build-tools" path="kernel_platform/prebuilts/build-tools" revision="cad7e11de82b3307000e09c9d539b2700bd17aea" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel"clone-depth="1">
+  <project remote="clo-la" name="kernel_platform/prebuilts/build-tools" path="kernel_platform/prebuilts/build-tools" revision="cad7e11de82b3307000e09c9d539b2700bd17aea" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" clone-depth="1">
     <linkfile dest="kernel_platform/build/prebuilts/build-tools" src="."/>
   </project>
   <project remote="clo-la" name="kernel_platform/prebuilts/clang-tools" path="kernel_platform/prebuilts/clang-tools" revision="0613fc5443d035335a9541994607bacae03750f2" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" clone-depth="1">
