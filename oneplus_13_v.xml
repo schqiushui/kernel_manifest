@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la"/>
-  <default remote="clo-la" revision="dummy_revision" sync-c="true" sync-tags="false"/>
   <remote fetch="https://github.com/schqiushui" name="origin"/>
+  <remote fetch="https://gitlab.com" name="gitlab"/>
+  <default remote="clo-la" revision="dummy_revision" sync-c="true" sync-tags="false"/>
   <project remote="origin" name="android_kernel_common_oneplus_sm8750" path="kernel_platform/common" revision="oneplus/sm8750_v_15.0.0_oneplus_13">
     <linkfile dest="kernel_platform/.source_date_epoch_dir" src="."/>
   </project>
   <project remote="origin" name="android_kernel_oneplus_sm8750" path="kernel_platform/msm-kernel" revision="oneplus/sm8750_v_15.0.0_oneplus_13">
-    <linkfile dest="kernel_platform/WORKSPACE" src="bazel.WORKSPACE"/>
     <linkfile dest="kernel_platform/build_with_bazel.py" src="build_with_bazel.py"/>
   </project>
   <project remote="origin" name="android_kernel_modules_and_devicetree_oneplus_sm8750" path="./" revision="oneplus/sm8750_v_15.0.0_oneplus_13"/>
-  <project remote="clo-la" name="kernel/common-modules/trusty" path="kernel_platform/common-modules/trusty" revision="b76f8570a1a3480a158f6bc69590dbf326a444d0" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" clone-depth="1"/>
   <project remote="clo-la" name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" revision="434f141b6d22a773a163fa9c707b19b4d254d989" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk" clone-depth="1">
     <linkfile dest="kernel_platform/build/prebuilts/kernel-build-tools" src="."/>
   </project>
+  <project remote="clo-la" name="abl/tianocore/edk2" path="kernel_platform/bootable/bootloader/edk2" revision="04de65754fdfc033a34df33b2cd57dc43bed4659" upstream="refs/heads/uefi.lnx.5.0.r10-rel"/>
   <project remote="clo-la" name="kernel_platform/build/bazel_common_rules" path="kernel_platform/build/bazel_common_rules" revision="7104d80549523ce9d9c5b95ec7cab8aba88afdb3" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk" clone-depth="1"/>
   <project remote="clo-la" name="kernel_platform/external/bazel-skylib" path="kernel_platform/external/bazel-skylib" revision="1699b2281164661387bcab62e08b1248f7908c49" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk-external" clone-depth="1"/>
   <project remote="clo-la" name="kernel_platform/external/bazelbuild-apple_support" path="kernel_platform/external/bazelbuild-apple_support" revision="f6003e1e3763f8aad9fb9acae79cfa5fff9ae988" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk-external" clone-depth="1"/>
@@ -32,7 +32,6 @@
   <project remote="clo-la" name="kernel_platform/external/pigz" path="kernel_platform/external/pigz" revision="9bc9fa17d499ddde88b77820f6d063e16c0cdd42" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk" clone-depth="1"/>
   <project remote="clo-la" name="kernel_platform/external/python/absl-py" path="kernel_platform/external/python/absl-py" revision="af9da234ce5045467014f4e7b53798e8feb2339b" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk-external" clone-depth="1"/>
   <project remote="clo-la" name="kernel_platform/external/toybox" path="kernel_platform/external/toybox" revision="dd6f71c76fe1574cf358129be29afa245eff4e36" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk" clone-depth="1"/>
-  <project remote="clo-la" name="kernel_platform/external/virtio-media" path="kernel_platform/external/virtio-media" revision="fabd03e8d334cae31fd2f575c546d8e946811ce2" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" clone-depth="1"/>
   <project remote="clo-la" name="kernel_platform/external/zlib" path="kernel_platform/external/zlib" revision="4f57254519623a55dcd5bedc454337f6352f2193" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk" clone-depth="1"/>
   <project remote="clo-la" name="kernel_platform/external/zopfli" path="kernel_platform/external/zopfli" revision="1e312f1cc3edc4cf7c489aa95a01f2878eb01fd7" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk" clone-depth="1"/>
   <project remote="clo-la" name="kernel_platform/prebuilts/asuite" path="kernel_platform/prebuilts/asuite" revision="249fe99d9f4dfe4ba307019feeb2c3c34a902bd7" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" clone-depth="1"/>
@@ -48,6 +47,7 @@
   <project remote="clo-la" name="kernel_platform/toolchain/prebuilts/ndk/r26" path="kernel_platform/prebuilts/ndk-r26" revision="39c0d89e553619d398797309398697764cf3547b" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk" clone-depth="1"/>
   <project remote="clo-la" name="kernel_platform/tools/tradefederation/prebuilts" path="kernel_platform/prebuilts/tradefed" revision="0d6bd67313f94bd03fc54c350b9de54d94442ee7" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" clone-depth="1"/>
   <project remote="clo-la" name="kernelplatform/prebuilts-master/clang/host/linux-x86" path="kernel_platform/prebuilts/clang/host/linux-x86" revision="b099698c583b8361ca771f3cc8d6af6f729f39b3" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk" clone-depth="1"/>
+  <project remote="gitlab" name="kei-space/clang/r522817" path="kernel_platform/prebuilts/clang/host/linux-x86/clang-r522817" revision="master" groups="ddk" clone-depth="1"/>
   <project remote="clo-la" name="kernelplatform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="kernel_platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" revision="e0de596ee4e1128b36fd2be9ec04422360bf404f" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk" clone-depth="1">
     <linkfile dest="kernel_platform/build/build-tools/sysroot" src="sysroot"/>
   </project>
